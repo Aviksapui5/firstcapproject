@@ -1,0 +1,11 @@
+ID,firstName,lastName,address,mobile,salary,email,designation
+550e8400-e29b-41d4-a716-446655440000,John,Doe,"123 Main St, Springfield",5551234567,55000.00,john.doe@example.com,Software Engineer
+123e4567-e89b-12d3-a456-426614174001,Jane,Smith,"456 Oak Ave, Rivertown",5552345678,62000.50,jane.smith@example.com,Project Manager
+789e0123-a34b-56c7-d890-123456789abc,Robert,Brown,"789 Pine Rd, Lakeview",5553456789,48000.75,robert.brown@example.com,QA Engineer
+321f6543-b21d-43c5-a567-678912345def,Linda,Johnson,"321 Birch Ln, Hilltop",5554567890,75000.00,linda.johnson@example.com,Product Owner
+456a7890-c12e-67d8-b123-789456123aaa,Michael,Williams,"654 Cedar St, Brookside",5555678901,51000.25,michael.williams@example.com,UI/UX Designer
+987b3210-d34f-78e9-c234-890123456bbb,Susan,Jones,"987 Maple Dr, Baytown",5556789012,59000.00,susan.jones@example.com,System Analyst
+246c5432-e45a-89f0-d345-901234567ccc,David,Miller,"246 Elm St, Meadowfield",5557890123,53000.80,david.miller@example.com,DevOps Engineer
+135d6543-f56b-90a1-e456-012345678ddd,Patricia,Davis,"135 Spruce Ave, Forestville",5558901234,67000.10,patricia.davis@example.com,Team Lead
+864e7654-a67c-01b2-f567-123456789eee,James,Garcia,"864 Walnut Blvd, Crestwood",5559012345,60000.99,james.garcia@example.com,Data Scientist
+579f8765-b78d-12c3-a678-234567890fff,Barbara,Martinez,"579 Poplar Ct, Lakeside",5550123456,72000.60,barbara.martinez@example.com,HR Manager
