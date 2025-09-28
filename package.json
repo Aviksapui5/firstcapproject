@@ -7,16 +7,74 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^9",
-    "express": "^4"
+    "express": "^4",
+    "@sap-cloud-sdk/connectivity": "^3",
+    "@sap-cloud-sdk/http-client": "^3",
+    "@sap-cloud-sdk/resilience": "^3",
+    "@cap-js/hana": "^2",
+    "@sap/xssec": "^4"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
+    "@cap-js/cds-types": "^0.13.0",
     "@cap-js/sqlite": "^2",
-    "@cap-js/cds-types": "^0.13.0"
+    "@sap/cds-dk": ">=8",
+    "cds-plugin-ui5": "^0.13.0"
   },
   "scripts": {
-    "start": "cds-serve"
-  }
+    "start": "cds-serve",
+    "watch-employee_app": "cds watch --open com.app.employeeapp/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "manager@tester.sap.com": {
+              "roles": [
+                "Manager"
+              ]
+            },
+            "employee@tester.sap.com": {
+              "roles": [
+                "Employee"
+              ]
+            }
+          }
+        }
+      },
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "my.db"
+        }
+      },
+      "S4CustomerAPI": {
+        "kind": "odata-v2",
+        "model": "srv/external/S4CustomerAPI",
+        "credentials": {
+          "destination": "s4hana",
+          "path": "/sap/opu/odata/SAP/ZCUSTOMERSERVICE_SRV/"
+        }
+      },
+      "[production]": {
+        "db": {
+          "kind": "hana"
+        },
+        "auth": "xsuaa"
+      },
+      "destinations": true,
+      "html5-runtime": true,
+      "workzone": true
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/employee_app"
+  ]
 }

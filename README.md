@@ -23,3 +23,11 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+
+
+- cds add hana --for production
+- cds add xsuaa --for production
+- cds add workzone-standard
+- Add Flp config and sap.cloud service in UI apps that is inside manifest.json
+- cds add mta
